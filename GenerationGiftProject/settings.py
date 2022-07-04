@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Training',
     'cloudinary',
+    'rest_framework',
     
 ]
 
@@ -82,11 +83,12 @@ WSGI_APPLICATION = 'GenerationGiftProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'generationgift',
+        'USER': 'riziki',
+        'PASSWORD':'riziki',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -133,4 +135,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 cloudinary.config(
     cloud_name = "dhvcmzuzw",
     api_key = "529236448688577",
-    api_secret = "lPkFO-rhoydBuXGgC4VMBlYiDP4"
+    api_secret = "lPkFO-rhoydBuXGgC4VMBlYiDP4")
