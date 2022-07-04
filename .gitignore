@@ -1,1 +1,9 @@
 virtual/
+/venv
+venv/
+/Pipfile
+/Pipfile.lock
+/GenerationGiftProject
+GenerationGiftProject/
+Pipfile.lock/
+Pipfile/
