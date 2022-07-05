@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'rest_framework',
+    'corsheaders',
     'Training',
     'authentification',
     'donations',
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -140,3 +142,8 @@ cloudinary.config(
     cloud_name = "dhvcmzuzw",
     api_key = "529236448688577",
     api_secret = "lPkFO-rhoydBuXGgC4VMBlYiDP4")
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",#angular
+    "http://127.0.0.1:8000",#django
+]
