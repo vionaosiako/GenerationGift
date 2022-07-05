@@ -1,23 +1,18 @@
 from django.db import models
-
-# Create your models here.
+from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 
-
+# Create your models here.
 class Profile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
-    profile_picture = models.ImageField(upload_to='images')
+    profile_picture = CloudinaryField('Image')
     bio= models.TextField(max_length=355,default='my bio',blank=True)
     name = models.CharField(max_length=65,blank=True)
     email = models.EmailField(max_length=120,blank=True)
     location = models.CharField(max_length=65,blank=True)
-    contact = models.CharField(max_length=65,blank=True)
-    
-    
-
-    
+    contact = models.CharField(max_length=65,blank=True) 
     
     def __str__(self):
         
