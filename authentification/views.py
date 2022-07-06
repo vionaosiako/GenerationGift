@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth.models import User
+from rest_framework.generics import RetrieveAPIView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from .serializers import ProfileSerializer,UserSerializer
@@ -27,6 +29,22 @@ class CustomLoginView():  #created custom loginView in order to use a different 
 
     def get_success_url(self):
         return reverse_lazy('home')
+    
+        model = get_user_model()
+        fields = ('id', 'username')
+
+
+class UserAPIView(RetrieveAPIView):
+    permission_classes = (IsAuthenticated)
+    serializer_class = UserSerializer
+    
+    def get_object(self):
+        self.request.user
+
+
+
+
+
 
 
 
