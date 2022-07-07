@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 generationvirtual/
 db.sqlite3
-=======
 __pyache__/
 .env/
 .vscode/
@@ -9,4 +7,4 @@ GenerationGiftProject/
 manage.py/
 __pyache__/
 images/
->>>>>>> f1c0a6de0c9a94c1f3ad0fb09bcac5f8ad621306
+
