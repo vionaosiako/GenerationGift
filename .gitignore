@@ -1,2 +1,10 @@
 virtual/
+__pyache__/
+.env/
+.vscode/
 GenerationGiftProject/
+db.sqlite3/
+manage.py/
+__pyache__/
+requirements.txt/
+images/
