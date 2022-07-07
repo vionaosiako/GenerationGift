@@ -120,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -147,3 +147,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",#angular
     "http://127.0.0.1:8000",#django
 ]
+
+# REST_FRAMEWORK = {
+#     'DATETIME_FORMAT': '%B %d, %Y', # returns November 8, 2021
+
+# }

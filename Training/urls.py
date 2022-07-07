@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 
 routes = DefaultRouter()
 
-routes.register('Training', TrainingViewset, basename = 'trainings')
+routes.register('trainings', TrainingViewset, basename = 'trainings')
 
 urlpatterns = [
     

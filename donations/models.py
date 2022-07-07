@@ -5,11 +5,10 @@ from django.contrib.auth.models import User
 
 class Donations(models.Model):
     items = models.CharField(max_length=30)
-    name = models.CharField(max_length=30)
+    donorname = models.CharField(max_length=30)
     location = models.CharField(max_length=30)
+    donationdate = models.DateField(null=True, blank=True)
     time = models.TimeField(null=True)
-    donation_date = models.DateTimeField(null=True, blank=True)
-    venue = models.TextField(max_length=30, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='donation',blank=True, null=True)
 
 
