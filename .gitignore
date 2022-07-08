@@ -1,1 +1,11 @@
+*.pyc
+generationvirtual/
+__pyache__/
+.env
+.vscode/
+db.sqlite3/
+manage.py/
+__pyache__/
+requirements.txt/
+images/
 virtual/

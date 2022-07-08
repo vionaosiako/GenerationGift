@@ -1,0 +1,1 @@
+web: gunicorn GenerationGiftProject.wsgi --log-file -
