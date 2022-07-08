@@ -1,5 +1,3 @@
-
-
 from rest_framework import serializers
 from .models import Profile
 from django.contrib.auth.models import User
@@ -15,8 +13,9 @@ class UserSerializer(serializers.ModelSerializer):
     profile = ProfileSerializer(read_only=True)
 
     class Meta:
+        password = serializers.CharField(style={'input_type': 'password'})
         model = User
-        fields = ['id','url', 'username', 'profile']
+        fields = ['id','username','email','password','url', 'profile']
         
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
