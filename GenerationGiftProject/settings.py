@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'donations',
     'Gene',
     'pitches',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [

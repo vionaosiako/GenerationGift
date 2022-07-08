@@ -6,6 +6,6 @@ class EmployerSerializer(serializers.HyperlinkedModelSerializer):
     
     class Meta:
         model = Employer
-        fields = ['job_title','date_posted','description', 'category', 'location' , 'approximate_salary' , 'deadline','user']
+        fields = ['id','job_title','date_posted','description', 'category', 'location' , 'approximate_salary' , 'deadline','user']
         
     
