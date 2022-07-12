@@ -1,8 +1,8 @@
 from .serializers import TrainingSerializer
 from rest_framework import viewsets
 from .models import Training
-from rest_framework.decorators import parser_classes
-from rest_framework.parsers import MultiPartParser
+# from rest_framework.decorators import parser_classes
+# from rest_framework.parsers import MultiPartParser
 
 # from drf_yasg.utils import swagger_auto_schema
 # Create your views here.
