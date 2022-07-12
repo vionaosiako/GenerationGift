@@ -4,12 +4,12 @@ from .models import Training
 # from rest_framework.decorators import parser_classes
 # from rest_framework.parsers import MultiPartParser
 
-# from drf_yasg.utils import swagger_auto_schema
+from drf_yasg.utils import swagger_auto_schema
 # Create your views here.
 
-# @swagger_auto_schema(request_body=TrainingSerializer)
+@swagger_auto_schema(request_body=TrainingSerializer)
 class TrainingViewset(viewsets.ModelViewSet):
-    parser_classes = [MultiPartParser]
+    
     serializer_class = TrainingSerializer
     queryset = Training.objects.all()
     
