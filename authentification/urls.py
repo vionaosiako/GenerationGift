@@ -9,12 +9,7 @@ from drf_yasg import openapi
 router = routers.DefaultRouter()
 router.register('profile', views.ProfileViewSet)
 
-
-
 router.register('users', views.UserViewSet)
-
-
-
 
 urlpatterns = [
     path('api/', include(router.urls)),

@@ -9,7 +9,7 @@ class Employer(models.Model):
     category = models.CharField(max_length=40, blank=True,null=True )
     location = models.CharField(max_length=100)
     approximate_salary = models.PositiveIntegerField(default=0)
-    deadline = models.DateTimeField(auto_now=True)
+    deadline = models.DateField(auto_now=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='employer',blank=True, null=True)
     
     def create_job(self):

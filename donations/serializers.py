@@ -7,5 +7,5 @@ class DonationsSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Donations
-        fields = ('id','items', 'donorname', 'location', 'time', 'donationdate','user')
+        fields = ('id','poster', 'items', 'donorname', 'location', 'time', 'donationdate','user')
         
