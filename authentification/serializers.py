@@ -16,7 +16,7 @@ class UserSerializer(serializers.ModelSerializer):
     #password2 = serializers.CharField(style={'input_type': 'password'}, write_only=True)
     class Meta:
         model = User
-        fields = ['username','email','password','profile','url']
+        fields = ['username','email','password','profile']
     def save(self, **kwargs):
         user = models.User(
         username=self.validated_data['username'],
