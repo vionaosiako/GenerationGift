@@ -33,7 +33,6 @@ class CustomLoginView():  #created custom loginView in order to use a different 
         model = get_user_model()
         fields = ('id', 'username')
 
-
 class UserAPIView(RetrieveAPIView):
     permission_classes = (IsAuthenticated)
     serializer_class = UserSerializer
@@ -41,17 +40,8 @@ class UserAPIView(RetrieveAPIView):
     def get_object(self):
         self.request.user
 
-
-
-
-
-
-
-
-
 def profile(request, username):
     return render(request)
-
 
 def user_profile(request, username):
     user_prof = get_object_or_404(User, username=username)
@@ -79,5 +69,3 @@ def edit_profile(request, username):
         'prof_form': prof_form
     }
     return render(request, params)
-
-    
