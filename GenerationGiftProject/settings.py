@@ -194,6 +194,7 @@ cloudinary.config(
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",#angular
     "http://127.0.0.1:8000",#django
+    "https://github.com/"#github
 ]
 
 SIMPLE_JWT = {
