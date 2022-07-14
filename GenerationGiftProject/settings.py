@@ -191,11 +191,11 @@ cloudinary.config(
     api_key = "529236448688577",
     api_secret = "lPkFO-rhoydBuXGgC4VMBlYiDP4")
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:4200",#angular
-    "http://127.0.0.1:8000",#django
-    "https://github.com/"#github
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:4200",#angular
+#     "http://127.0.0.1:8000",#django
+#     "https://github.com/"#github
+# ]
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1),
@@ -215,3 +215,6 @@ REST_FRAMEWORK = {
     'rest_framework.authentication.BasicAuthentication',
     )
 }
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
